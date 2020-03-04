@@ -1,0 +1,10 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+      "alwaysStrict": true,
+      "noStrictGenericChecks": true
+  },
+  "exclude": [
+      ".meteor/local"
+  ]
+}

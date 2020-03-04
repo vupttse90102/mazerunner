@@ -1,0 +1,36 @@
+<head>
+  <title>mazerunner</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  {{> templateMazeRunner}}
+
+
+</body>
+
+<template name="templateMazeRunner">
+  {{> templateMaze maze}}
+  <br>
+  <button class="js-reset">Reset</button>
+  <button class="js-solve">Click me to solve</button>
+</template>
+
+<template name="templateMaze">
+    <div class="maze" {{style}}>
+        {{#each row in rows}}
+          <div class="row">
+            {{#each point in row}}
+              {{>templatePoint point}}
+            {{/each}}
+          </div>
+        {{/each}}
+    </div>
+</template>
+
+<template name="templatePoint">
+    <div class="point {{modClass}}" data-x="{{x}}" data-y={{y}} id="{{id}}">
+        <span>{{value}}</span>
+    </div>
+</template>
+
